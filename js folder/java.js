@@ -97,10 +97,11 @@ async function getData(country = "egypt"){
     
     
     let weatherData = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=d4c1cc9f15fb4a6783c124236240101&q=${country}&days=7`)
-    let response = await weatherData.json()
+    if(weatherData.status == 200){
+        let response = await weatherData.json()
     
 
-    
+   
         countryName.innerHTML = response.location.name
     countryTemp.innerHTML = response.current.temp_c+"oC"
     countryImg.setAttribute("src", "https:"+response.current.condition.icon)
@@ -119,6 +120,9 @@ async function getData(country = "egypt"){
     countryTemp3.innerHTML = response.forecast.forecastday[2].day.maxtemp_c+"oC"
     countryTempLower3.innerHTML = response.forecast.forecastday[2].day.mintemp_c+"oC"
     countryStats3.innerHTML = response.forecast.forecastday[2].day.condition.text
+
+
+    }
 
 
 
