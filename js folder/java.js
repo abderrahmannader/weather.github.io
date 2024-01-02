@@ -27,7 +27,8 @@ let dateDay3 = document.querySelector(".date3")
 
 
 
-console.log("hi")
+days()
+getLocation()
 
 
 
