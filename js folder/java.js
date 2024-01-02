@@ -100,7 +100,7 @@ async function getData(country = "egypt"){
     let response = await weatherData.json()
     
 
-    if(response.status != 400){
+    
         countryName.innerHTML = response.location.name
     countryTemp.innerHTML = response.current.temp_c+"oC"
     countryImg.setAttribute("src", "https:"+response.current.condition.icon)
@@ -121,9 +121,7 @@ async function getData(country = "egypt"){
     countryStats3.innerHTML = response.forecast.forecastday[2].day.condition.text
 
 
-    }else{
-        alert("wrong country name")
-    }
+
     
 
 
