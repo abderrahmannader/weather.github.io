@@ -130,6 +130,4 @@ async function getData(country = "egypt"){
 }
 
 
-getData()
-days()
-getLocation()
+
