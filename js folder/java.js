@@ -96,7 +96,7 @@ async function days(){
 async function getData(country = "egypt"){
     
     
-    let weatherData = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=d4c1cc9f15fb4a6783c124236240101&q=${country}&days=7`)
+    let weatherData = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=d4c1cc9f15fb4a6783c124236240101&q=${country}&days=7`)
     if(weatherData.status == 200){
         let response = await weatherData.json()
     
